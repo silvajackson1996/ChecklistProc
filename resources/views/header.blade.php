@@ -26,7 +26,14 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/css/bootstrap-select.min.css">
-
+    <style>
+        .bootstrap-select {
+            width: 100% !important;
+        }
+        .form-control { 
+            border-bottom: none !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,9 +52,15 @@
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li>
-                    <a href="../dashboard.html">
+                    <a href="{{ route('checklist-table') }}">
                         <i class="material-icons">dashboard</i>
-                        <p> Inserir Incidente </p>
+                        <p> Incidentes</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('checklist-create') }}">
+                        <i class="material-icons">add</i>
+                        <p> Inserir Incidente</p>
                     </a>
                 </li>
             </ul>

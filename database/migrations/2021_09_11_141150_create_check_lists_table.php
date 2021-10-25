@@ -15,14 +15,18 @@ class CreateCheckListsTable extends Migration
     {
         Schema::create('check_lists', function (Blueprint $table) {
             $table->id();
-            $table->time('hourly');
-            $table->enum('weekday', ['MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY', 'ALL']);
-            $table->string('activity');
-            $table->string('department')->nullable();
+            $table->string('incident');
+            $table->string('system_affected')->nullable();
+            $table->string('affected_routine')->nullable();
             $table->string('entity')->nullable();
-            $table->string('task')->nullable();
-            $table->integer('user_id');
-            $table->enum('status', ['PENDING', 'EXECUTION', 'FINISHED']);
+            $table->string('error_log')->nullable();
+            $table->string('external_contact')->nullable();
+            $table->string('responsible_team')->nullable();
+            $table->string('error_type')->nullable();
+            $table->string('impact')->nullable();
+            $table->string('incident_opening')->nullable();
+            $table->string('service_start')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

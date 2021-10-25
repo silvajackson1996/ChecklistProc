@@ -14,4 +14,9 @@ use App\Http\Controllers\CheckListController;
 |
 */
 
-Route::get('/', [CheckListController::class, 'index']);
+Route::get('/', [CheckListController::class, 'index'])->name('checklist-table');
+Route::get('/create', [CheckListController::class, 'create'])->name('checklist-create');
+Route::post('/create/store', [CheckListController::class, 'store'])->name('checklist-store');
+Route::get('/create/delete/{id}', [CheckListController::class, 'delete'])->name('checklist-delete');
+Route::get('/show/{id}', [CheckListController::class, 'show'])->name('checklist-show');
+Route::post('/update/{id}', [CheckListController::class, 'update'])->name('checklist-update');
