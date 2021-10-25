@@ -6,8 +6,9 @@
     <!-- <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" /> -->
     <!-- <link rel="icon" type="image/png" href="../assets/img/favicon.png" /> -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link href="{{ url('/assets/img/favicon.jpg')}}" rel="icon" />
 
-    <title>teste</title>
+    <title>Checklist Incidentes Críticos</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -23,12 +24,12 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/css/bootstrap-select.min.css">
 
 </head>
 
-<body >
+<body>
 <div class="wrapper">
     <div class="sidebar" data-active-color="green" data-background-color="black" data-image="{{ url('/assets/img/sidebar-5.jpg') }}">
         <!--
@@ -43,6 +44,12 @@
         </div>
         <div class="sidebar-wrapper">
             <ul class="nav">
+                <li>
+                    <a href="../dashboard.html">
+                        <i class="material-icons">dashboard</i>
+                        <p> Inserir Incidente </p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
