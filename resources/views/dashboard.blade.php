@@ -27,7 +27,8 @@
                                                 <th>Sistema afetado</th>
                                                 <th>Rotina afetada</th>
                                                 <th>Entidade(s)</th>
-                                                <th>Data</th>
+                                                <th>Data de cadastro</th>
+                                                <th>Abertura incidente</th>
                                                 <th class="disabled-sorting text-right">Ações</th>
                                             </tr>
                                         </thead>
@@ -37,7 +38,8 @@
                                                 <th>Sistema afetado</th>
                                                 <th>Rotina afetada</th>
                                                 <th>Entidade(s)</th>
-                                                <th>Data</th>
+                                                <th>Data de cadastro</th>
+                                                <th>Abertura incidente</th>
                                                 <th class="text-right">Ações</th>
                                             </tr>
                                         </tfoot>
@@ -49,6 +51,7 @@
                                                 <td>{{ $event->affected_routine }}</td>
                                                 <td>{{ $event->entity }}</td>
                                                 <td>{{ $event->created_at }}</td>
+                                                <td>{{ $event->incident_opening }}</td>
                                                 <td class="text-right">
                                                     <a href="{{ route('checklist-show', ['id' => $event->id]) }}" class="btn btn-simple btn-warning btn-icon"><i class="material-icons">dvr</i></a>
                                                     <a href="{{ route('checklist-delete', ['id' => $event->id]) }}" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a>
